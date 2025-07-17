@@ -8,13 +8,23 @@
 
 <h1>Task Manager</h1>
 
-<dic>
+<div>
+    <form action="/" method="post">
+        <div>
+            <input type="text" name="title" placeholder="add a new task" required>
+
+        </div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+
+    </form>
     <th:block th:each="task : ${tasks}">
         <div>
             <span th:text="${task.title}">Task Title</span>
         </div>
     </th:block>
-</dic>
+</div>
 
 </body>
 </html>
